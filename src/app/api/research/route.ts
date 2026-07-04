@@ -264,7 +264,8 @@ Based on the data above, generate a professional, accurate report for this compa
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
-        response_format: { type: "json_object" }
+        response_format: { type: "json_object" },
+        max_tokens: 2000
       })
     });
 
@@ -291,7 +292,8 @@ Based on the data above, generate a professional, accurate report for this compa
               { role: "system", content: systemPrompt },
               { role: "user", content: userPrompt }
             ],
-            response_format: { type: "json_object" }
+            response_format: { type: "json_object" },
+            max_tokens: 2000
           })
         });
       }
