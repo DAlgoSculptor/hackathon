@@ -2,6 +2,27 @@
 
 An AI-powered Company Research Assistant that enables users to research any company by providing either the company name or its website URL. The application automatically crawls the target website, searches the web via Serper.dev, analyzes facts via OpenRouter AI, and produces downloadable PDF reports.
 
+## Application Screenshots & Sample Report
+
+### Sample Output
+📄 **Download Sample PDF Report**: [Stripe, Inc. Research Report](public/stripe_research_report.pdf)
+
+### UI Showcase
+
+#### 1. Premium Glassmorphic Dashboard (Stripe Research Complete)
+![Stripe Research Report](public/screenshots/stripe_report.png)
+
+#### 2. Conducting Company Research (Loading State with Ambient Glow Orbs)
+![Research Loading](public/screenshots/research_loading.png)
+
+#### 3. OpenAI Research Dashboard
+![OpenAI Research Report](public/screenshots/openai_report.png)
+
+#### 4. Tesla Research Dashboard
+![Tesla Research Report](public/screenshots/tesla_report.png)
+
+---
+
 ## Features
 - **ChatGPT-Style Layout**: Sleek, fully responsive dark-themed user interface.
 - **Search-Enriched Crawling**: Uses Serper.dev to find official sites (if only names are supplied) and fetches contact coordinates.
