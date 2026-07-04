@@ -554,6 +554,10 @@ export default function Home() {
 
       {/* Main Interactive Screen */}
       <main className="main-panel">
+        {/* Ambient Glowing Orbs */}
+        <div className="glow-orb glow-orb-1"></div>
+        <div className="glow-orb glow-orb-2"></div>
+
         <header className="main-header">
           <div className="main-header-title">
             Company Research
@@ -623,7 +627,7 @@ export default function Home() {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      {report.website} <ExternalLink size={12} style={{ display: 'inline' }} />
+                      {report.website} <ExternalLink size={14} style={{ display: 'inline' }} />
                     </a>
                   </div>
                   <span className="status-badge">Research Complete</span>
@@ -631,17 +635,25 @@ export default function Home() {
 
                 <div className="report-info-grid">
                   <div className="info-box">
-                    <span className="info-label">Phone</span>
+                    <div className="info-label-group">
+                      <Phone size={11} className="pain-point-icon" />
+                      <span className="info-label">Phone</span>
+                    </div>
                     <p className="info-value">{report.phone || "Not publicly listed"}</p>
                   </div>
                   <div className="info-box">
-                    <span className="info-label">Address</span>
+                    <div className="info-label-group">
+                      <MapPin size={11} className="pain-point-icon" />
+                      <span className="info-label">Address</span>
+                    </div>
                     <p className="info-value">{report.address || "Not publicly listed"}</p>
                   </div>
                 </div>
 
                 <div className="report-section">
-                  <h3 className="section-title">Products & Services</h3>
+                  <h3 className="section-title">
+                    <Sparkles size={14} style={{ color: 'var(--accent-gold)' }} /> Products & Services
+                  </h3>
                   <div className="tag-cloud">
                     {report.productsServices && report.productsServices.map((prod, index) => (
                       <span key={index} className="tag-item">{prod}</span>
@@ -650,16 +662,23 @@ export default function Home() {
                 </div>
 
                 <div className="report-section">
-                  <h3 className="section-title">AI-Generated Pain Points</h3>
+                  <h3 className="section-title">
+                    <Info size={14} style={{ color: 'var(--accent-gold)' }} /> AI-Generated Pain Points
+                  </h3>
                   <ul className="pain-points-list">
                     {report.painPoints && report.painPoints.map((pt, index) => (
-                      <li key={index} className="pain-point-item">{pt}</li>
+                      <li key={index} className="pain-point-item">
+                        <span className="pain-point-icon">⚠️</span>
+                        <span>{pt}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="report-section">
-                  <h3 className="section-title">Competitors</h3>
+                  <h3 className="section-title">
+                    <MessageSquare size={14} style={{ color: 'var(--accent-gold)' }} /> Competitors
+                  </h3>
                   <div className="competitors-grid">
                     {report.competitors && report.competitors.map((comp, index) => (
                       <div key={index} className="competitor-card">
@@ -670,7 +689,7 @@ export default function Home() {
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
-                          {comp.website}
+                          {comp.website} <ExternalLink size={10} style={{ display: 'inline', marginLeft: '4px' }} />
                         </a>
                       </div>
                     ))}
