@@ -2,6 +2,8 @@
 
 An AI-powered Company Research Assistant that enables users to research any company by providing either the company name or its website URL. The application automatically crawls the target website, searches the web via Serper.dev, analyzes facts via OpenRouter AI, and produces downloadable PDF reports.
 
+🔗 **Live Deployment**: [hackathon-sandy-two.vercel.app](https://hackathon-sandy-two.vercel.app/)
+
 ## Application Screenshots & Sample Report
 
 ### Sample Output
